@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track the ISS</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div>
+        <div class="alert alert-success fade show" role="alert">
+            <strong>Zoom In or Out in order to view the position of the ISS better . Psst ... try out the Satellite View</strong>
+        </div>
+        <!--Map-->
+        <div id="map-div">
+        </div>
+        <!--details-->
+        <div id="details">
+            <div>
+                Time : <span class="time"></span>
+            </div>
+            <!--latitude-->
+            <div>
+                Latitude : <span class="latitude"></span>
+            </div>
+            <!--longitude-->
+            <div>
+                Longitude : <span class="longitude"></span>
+            </div>
+            <!--speed-->
+            <div>
+                Speed : <span class="speed"></span>
+            </div>
+            <!--altitude-->
+            <div>
+                Altitude : <span class="altitude"></span>
+            </div>
+            <!--visibility-->
+            <div>
+                Visibility : <span class="visibility"></span>
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-dark btn-block" onclick="toogle()" id="toogl">
+                Go To Satellite View
+            </button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>
